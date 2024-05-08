@@ -1,11 +1,8 @@
-.App {
+/* .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -35,4 +32,15 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+body {
+  margin: 0;
+  padding: 20px 10px;
+  height: 50vh;
+  width: 100vw;
+  background-color: rgb(120, 108, 108);
+  color: white;
+  position: relative;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
