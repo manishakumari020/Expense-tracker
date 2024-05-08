@@ -13,7 +13,7 @@ const Expense = ({ updateData }) => {
   const [expense, setExpense] = useState(0);
 
   const [incomeAmount, setIncomeAmount] = useState();
-  const [expenseAmount, setExpenseAmount] = useState([]); // Initialize as empty array for tracking all the expenses
+  const [expenseAmount, setExpenseAmount] = useState([]); 
 
   const [dataToSendToLocalStorage, setDataToSendToLocalStorage] = useState([]);
   const [fetchDataForPie, setFetchDataForPie] = useState([]);
@@ -30,7 +30,7 @@ const Expense = ({ updateData }) => {
     }));
     setFetchDataForPie(transformedData);
   }, []);
-  //console.log(fetchDataForPie);
+ 
 
   const [inputData, setInputData] = useState({
     title: "",
@@ -39,7 +39,7 @@ const Expense = ({ updateData }) => {
     date: "",
     wallet_Balance: walletBalance,
     expense: 0,
-  }); // Initialize as empty array for multiple sets of input data
+  }); 
 
   const openModalForAddBalanceToWallet = () => {
     setShowAddBalanceModal(true);
@@ -64,11 +64,11 @@ const Expense = ({ updateData }) => {
       return;
     }
 
-    // Update the expense array with the current expense
+   
     const updatedExpenseArr = [...expenseAmount, currentExpense];
     setExpenseAmount(updatedExpenseArr);
 
-    // Calculate the new wallet balance
+   
     const newWalletBalance = walletBalance - currentExpense;
 
     // Prepare the expense data object with the updated wallet balance
@@ -112,7 +112,7 @@ const Expense = ({ updateData }) => {
   };
 
   const handleSubmitAddAmount = () => {
-    // Retrieve the expenses data from localStorage
+    
     const expensesData = JSON.parse(window.localStorage.getItem("expenses"));
 
     // Calculate the new wallet balance by adding the income amount
